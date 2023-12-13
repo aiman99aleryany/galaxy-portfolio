@@ -1,0 +1,55 @@
+.galaxy {
+  position: fixed;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  @for $i from 0 through 60 {
+    .star-#{$i} {
+      position: absolute;
+      left: random(50) + $i + vw;
+      width: 4px;
+      height: 4px;
+      background-color: #ffffff;
+      mix-blend-mode: multiply;
+
+      @if $i % 2 == 0 {
+        animation-name: move;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate-reverse;
+        animation-duration: random(10000) * ($i + 1) + 40000 + ms;
+        animation-iteration-count: infinite;
+      } @else {
+        top: #{random(90)} + '%';
+        animation-name: float;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: random(10000) * ($i + 1) + 50000 + ms;
+      }
+
+      border-radius: 100%;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    trasform: translateY(0vh);
+  }
+
+  100% {
+    transform: translateY(10vh);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+
+  100% {
+    transform: translateX(1vw) translateY(100vh);
+  }
+}

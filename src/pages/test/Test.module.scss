@@ -1,0 +1,13 @@
+@use '/src/styles/const.scss' as const;
+
+.wrapper {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(70deg, const.$primary-deepSpace, const.$tertiary-deepSpace);
+}
+
+.wrapper2 {
+}
+
+.wrapper3 {
+}

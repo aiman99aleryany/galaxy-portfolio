@@ -1,0 +1,93 @@
+@use '/src/styles/const.scss' as const;
+
+:root {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('/Dosis/Dosis-VariableFont_wght.ttf') format('truetype');
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  -webkit-tap-highlight-color: transparent !important;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Dosis', sans-serif;
+  background-image: linear-gradient(
+    120deg,
+    const.$primary-deepSpace,
+    const.$secondary-deepSpace,
+    const.$tertiary-deepSpace
+  );
+
+  background-size: 300%;
+  animation-name: loop2;
+  animation-duration: 35000ms;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  overflow: visible;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+@keyframes loop2 {
+  0% {
+    background-position: right;
+  }
+  50% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}

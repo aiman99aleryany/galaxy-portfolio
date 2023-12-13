@@ -1,0 +1,7 @@
+@use '/src/styles/const.scss' as const;
+
+.div {
+  margin: 0 auto;
+  max-width: const.$max-width;
+  position: relative;
+}

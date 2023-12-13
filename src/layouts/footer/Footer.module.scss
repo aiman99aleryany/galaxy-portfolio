@@ -1,0 +1,31 @@
+@use '/src/styles/bp.scss' as bp;
+
+@include bp.mini {
+  .wrapper {
+  }
+}
+
+@include bp.small {
+  .wrapper {
+  }
+}
+
+@include bp.medium {
+  .wrapper {
+  }
+}
+
+@include bp.large {
+  .wrapper {
+  }
+}
+
+@include bp.xlarge {
+  .wrapper {
+  }
+}
+
+@include bp.huge {
+  .wrapper {
+  }
+}
